@@ -1,0 +1,1 @@
+import {useState} from "react";export const useValue = () => {    const [value, setValue] = useState('');    return {        bind:{            value,            onChange: (event) => setValue(event.target.value)        },        clear: () => setValue(''),        value: () => value    }};
